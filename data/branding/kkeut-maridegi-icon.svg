@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">끗마릳기 아이콘</title>
+  <desc id="desc">왕관을 쓴 보라색 끗 배지로 만든 투명 배경 게임 아이콘</desc>
+  <defs>
+    <linearGradient id="purple" x1="82" y1="160" x2="431" y2="469" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8B5CFF"/>
+      <stop offset="0.52" stop-color="#6847F5"/>
+      <stop offset="1" stop-color="#4A2BD8"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="115" y1="38" x2="406" y2="219" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF0A6"/>
+      <stop offset="0.45" stop-color="#FFD560"/>
+      <stop offset="1" stop-color="#F6A91D"/>
+    </linearGradient>
+    <linearGradient id="goldStroke" x1="125" y1="37" x2="386" y2="221" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE994"/>
+      <stop offset="1" stop-color="#E58B10"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="100" y1="190" x2="392" y2="463" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.24"/>
+      <stop offset="0.58" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="170%" height="185%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#2C1A78" flood-opacity="0.28"/>
+    </filter>
+    <filter id="crownShadow" x="-30%" y="-30%" width="170%" height="185%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="9" stdDeviation="7" flood-color="#7A4710" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="77" y="172" width="358" height="284" rx="98" fill="url(#purple)"/>
+    <rect x="93" y="188" width="326" height="252" rx="82" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="7"/>
+    <path d="M103 298C162 225 227 199 320 203C270 228 233 267 208 318C173 318 138 311 103 298Z" fill="url(#shine)"/>
+    <circle cx="119" cy="393" r="14" fill="#57E2BF"/>
+    <circle cx="392" cy="239" r="12" fill="#FF7185"/>
+    <text x="256" y="383" text-anchor="middle" font-family="'Noto Sans KR','Malgun Gothic','NanumGothic',sans-serif" font-size="210" font-weight="900" letter-spacing="-10" fill="#FFFFFF">끗</text>
+  </g>
+
+  <g filter="url(#crownShadow)">
+    <path d="M113 145L142 213H376L405 145L343 185L297 80L254 165L208 80L162 185L113 145Z" fill="url(#gold)" stroke="url(#goldStroke)" stroke-width="11" stroke-linejoin="round"/>
+    <path d="M143 214H375L365 250H153L143 214Z" fill="#F6AE25" stroke="#E58B10" stroke-width="9" stroke-linejoin="round"/>
+    <path d="M165 219H353" fill="none" stroke="#FFF1A7" stroke-width="8" stroke-linecap="round" opacity="0.9"/>
+    <circle cx="111" cy="139" r="20" fill="#FF7185" stroke="#FFFFFF" stroke-width="8"/>
+    <circle cx="208" cy="73" r="20" fill="#57E2BF" stroke="#FFFFFF" stroke-width="8"/>
+    <circle cx="297" cy="73" r="20" fill="#6B49F6" stroke="#FFFFFF" stroke-width="8"/>
+    <circle cx="406" cy="139" r="20" fill="#FF7185" stroke="#FFFFFF" stroke-width="8"/>
+  </g>
+</svg>

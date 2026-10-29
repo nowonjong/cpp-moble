@@ -1,0 +1,33 @@
+PASS UTF-8 valid scalars and Hangul parts
+PASS UTF-8 malformed/overlong/surrogate/out-of-range rejection
+PASS dictionary BOM/CRLF/trim/duplicates/bad lines
+PASS dictionary missing/empty/invalid/unreadable and reload
+PASS rule validation codes, whitespace and maximum length
+PASS AI one/none/all-used candidates; input state unchanged
+PASS normal AI minimizes replies and excludes its own candidate
+PASS opening filtering and unsupported settings
+PASS game blank input leaves all round fields unchanged
+PASS game two errors then correct; next turn restores three chances
+PASS game third error loses once without score/history changes
+PASS game used opening rejected without registering it again
+PASS game human and computer no-candidate outcomes
+PASS game surrender vs abort; aborted high score excluded
+PASS game restart clears score/errors/used/hint state and keeps records
+PASS hint disabled/insufficient points and exact cost without turn change
+PASS hint maximum three uses; no candidate returns no hint
+PASS records roundtrip/overwrite/settings/history/statistics
+PASS records strict corruption handling and blocked overwrite
+PASS records BOM/CRLF/empty history and reload does not duplicate
+PASS records missing/read failure/invalid result/write failure
+PASS records explicit reset backs up original bytes
+PASS game saved once and result survives disk failure
+PASS UI parses menu errors/blank/quit/hint/EOF without game rules
+PASS application end-to-end settings/play/surrender/statistics
+PASS application three bad words / game EOF / menu EOF
+PASS application corrupt-file refusal preserves data; reset creates backup
+PASS application missing dictionary and no playable opening
+PASS 2000 random states: indexed candidates equal independent full scan
+EVIDENCE dictionary=27832, games=200, human_moves=802, wins=66, losses=134
+PASS shipping dictionary: 200 full games, both AI modes and invariants
+SUMMARY 30 test groups passed; 0 failed.
+Test artifacts: C:\Users\Moble\AppData\Local\Temp\wordchain_tests_3193225755100

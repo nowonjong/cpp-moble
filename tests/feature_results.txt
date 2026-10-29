@@ -1,0 +1,7 @@
+PASS 16 core test groups; 0 failed.
+PASS computer defeat awards +1000 and starts a fresh round without ending the game.
+PASS easy and normal prefer familiar words; hard minimizes reply choices.
+PASS all 8 rule-option combinations and all 3 difficulty levels are represented in shipping-data tests.
+EVIDENCE dictionary=285622 korean=438 games=8 moves=31 long_rallies_ended_by_errors=5
+PASS SFML screens, native UTF-8 input path, validation, AI turn, chance reset, +1000 continuation, ranking and abort policy.
+EVIDENCE continued game score=1430 (190 + 240 + 1000); ranking saved after player-ended game.

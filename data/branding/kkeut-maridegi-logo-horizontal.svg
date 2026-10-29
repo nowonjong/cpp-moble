@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">끗마릳기 가로형 로고</title>
+  <desc id="desc">왕관을 쓴 보라색 끗 배지와 끗마릳기 게임명이 조합된 투명 배경 로고</desc>
+  <defs>
+    <linearGradient id="purple" x1="56" y1="104" x2="306" y2="322" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8B5CFF"/>
+      <stop offset="0.52" stop-color="#6847F5"/>
+      <stop offset="1" stop-color="#4A2BD8"/>
+    </linearGradient>
+    <linearGradient id="purpleText" x1="390" y1="94" x2="1010" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#392483"/>
+      <stop offset="0.58" stop-color="#5636CA"/>
+      <stop offset="1" stop-color="#7350F2"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="96" y1="24" x2="282" y2="143" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF0A6"/>
+      <stop offset="0.45" stop-color="#FFD560"/>
+      <stop offset="1" stop-color="#F6A91D"/>
+    </linearGradient>
+    <linearGradient id="goldStroke" x1="104" y1="25" x2="264" y2="145" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE994"/>
+      <stop offset="1" stop-color="#E58B10"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="98" y1="120" x2="274" y2="306" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.22"/>
+      <stop offset="0.58" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="markShadow" x="-30%" y="-30%" width="170%" height="185%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#2C1A78" flood-opacity="0.25"/>
+    </filter>
+    <filter id="crownShadow" x="-30%" y="-30%" width="170%" height="185%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="7" stdDeviation="5" flood-color="#7A4710" flood-opacity="0.23"/>
+    </filter>
+  </defs>
+
+  <g id="hall-of-fame-mark" filter="url(#markShadow)">
+    <rect x="57" y="106" width="252" height="210" rx="68" fill="url(#purple)"/>
+    <rect x="68" y="117" width="230" height="188" rx="58" fill="none" stroke="#FFFFFF" stroke-opacity="0.17" stroke-width="4"/>
+    <path d="M82 193C123 142 168 123 233 126C199 143 173 170 156 206C132 206 107 202 82 193Z" fill="url(#shine)"/>
+    <circle cx="90" cy="274" r="9" fill="#57E2BF"/>
+    <circle cx="279" cy="157" r="8" fill="#FF7185"/>
+    <text x="183" y="264" text-anchor="middle" font-family="'Noto Sans KR','Malgun Gothic','NanumGothic',sans-serif" font-size="142" font-weight="900" letter-spacing="-7" fill="#FFFFFF">끗</text>
+  </g>
+
+  <g id="crown" filter="url(#crownShadow)">
+    <path d="M91 91L110 137H267L286 91L244 118L213 49L184 105L153 49L122 118L91 91Z" fill="url(#gold)" stroke="url(#goldStroke)" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M111 138H266L259 162H119L111 138Z" fill="#F6AE25" stroke="#E58B10" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M126 142H252" fill="none" stroke="#FFF1A7" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+    <circle cx="90" cy="87" r="13" fill="#FF7185" stroke="#FFFFFF" stroke-width="5"/>
+    <circle cx="153" cy="45" r="13" fill="#57E2BF" stroke="#FFFFFF" stroke-width="5"/>
+    <circle cx="213" cy="45" r="13" fill="#6B49F6" stroke="#FFFFFF" stroke-width="5"/>
+    <circle cx="286" cy="87" r="13" fill="#FF7185" stroke="#FFFFFF" stroke-width="5"/>
+  </g>
+
+  <g id="wordmark">
+    <text x="372" y="218" font-family="'Noto Sans KR','Malgun Gothic','NanumGothic',sans-serif" font-size="128" font-weight="900" letter-spacing="-8" fill="url(#purpleText)">끗마릳기</text>
+    <g transform="translate(383 254)">
+      <path d="M0 0H73" stroke="#F6B52A" stroke-width="12" stroke-linecap="round"/>
+      <circle cx="91" cy="0" r="7" fill="#FF7185"/>
+      <circle cx="114" cy="0" r="7" fill="#57E2BF"/>
+      <path d="M134 0H454" stroke="#DCD4FF" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <text x="384" y="306" font-family="'Noto Sans KR','Malgun Gothic','NanumGothic',sans-serif" font-size="27" font-weight="700" letter-spacing="1" fill="#6A6482">말끝의 왕을 가린다</text>
+    <g transform="translate(924 272)">
+      <rect width="204" height="50" rx="25" fill="#FFF4D2"/>
+      <circle cx="27" cy="25" r="10" fill="#F6B52A"/>
+      <path d="M22 25L26 29L33 20" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="49" y="33" font-family="'Noto Sans KR','Malgun Gothic','NanumGothic',sans-serif" font-size="20" font-weight="800" fill="#745A1B">WORD CHAMPION</text>
+    </g>
+  </g>
+</svg>

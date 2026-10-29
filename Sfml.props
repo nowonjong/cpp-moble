@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Import after the project's ItemDefinitionGroup so /MD replaces /MT. -->
+  <PropertyGroup>
+    <SfmlRoot>$(MSBuildThisFileDirectory)third_party\SFML-3.0.2\</SfmlRoot>
+    <SfmlLibrarySuffix Condition="'$(Configuration)' == 'Debug'">-d</SfmlLibrarySuffix>
+    <SfmlLibrarySuffix Condition="'$(Configuration)' != 'Debug'"></SfmlLibrarySuffix>
+    <SfmlDllSuffix>$(SfmlLibrarySuffix)-3</SfmlDllSuffix>
+    <SfmlCrtRoot Condition="Exists('$(VCToolsRedistInstallDir)x64\Microsoft.VC143.CRT\msvcp140.dll')">$(VCToolsRedistInstallDir)x64\Microsoft.VC143.CRT\</SfmlCrtRoot>
+    <SfmlCrtRoot Condition="'$(SfmlCrtRoot)' == '' and Exists('$(VCToolsRedistDir)x64\Microsoft.VC143.CRT\msvcp140.dll')">$(VCToolsRedistDir)x64\Microsoft.VC143.CRT\</SfmlCrtRoot>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SfmlRoot)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary Condition="'$(Configuration)' == 'Debug'">MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary Condition="'$(Configuration)' != 'Debug'">MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SfmlRoot)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics$(SfmlLibrarySuffix).lib;sfml-window$(SfmlLibrarySuffix).lib;sfml-system$(SfmlLibrarySuffix).lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Target Name="CheckSfmlSdk" BeforeTargets="ClCompile">
+    <Error Condition="'$(Platform)' != 'x64'" Text="The bundled SFML SDK requires the x64 platform." />
+    <Error Condition="!Exists('$(SfmlRoot)include\SFML\Graphics.hpp')" Text="SFML SDK not found. Restore third_party\SFML-3.0.2 from the official VC2022 x64 package." />
+  </Target>
+  <Target Name="CopySfmlRuntime" AfterTargets="Build">
+    <ItemGroup>
+      <SfmlRuntimeFiles Include="$(SfmlRoot)bin\sfml-graphics$(SfmlDllSuffix).dll;$(SfmlRoot)bin\sfml-window$(SfmlDllSuffix).dll;$(SfmlRoot)bin\sfml-system$(SfmlDllSuffix).dll" />
+      <!-- Only licensed, redistributable RELEASE CRT files are deployed. -->
+      <SfmlCrtFiles Condition="'$(Configuration)' != 'Debug' and '$(SfmlCrtRoot)' != ''" Include="$(SfmlCrtRoot)*.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(SfmlRuntimeFiles)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(SfmlCrtFiles)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(SfmlRoot)license.md" DestinationFiles="$(OutDir)licenses\SFML-license.md" SkipUnchangedFiles="true" />
+    <Warning Condition="'$(Configuration)' != 'Debug' and '$(SfmlCrtRoot)' == ''" Text="VS release CRT files were not found. Other PCs need the Microsoft Visual C++ x64 Redistributable." />
+  </Target>
+</Project>
+
