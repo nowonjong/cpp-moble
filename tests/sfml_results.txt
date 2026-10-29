@@ -1,0 +1,2 @@
+PASS SFML screens, native UTF-8 input, validation, AI turn, chance reset, win, loss, restart, records, close confirmation and abort.
+Records: 1 win, 1 loss, 1 aborted. Best score: 20.

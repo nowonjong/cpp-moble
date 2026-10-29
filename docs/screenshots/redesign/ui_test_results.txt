@@ -1,0 +1,3 @@
+PASS SFML screens, profile entry/create/select, computer-turn pause freeze, hidden-input blocking, close-cancel pause restoration, resume, native UTF-8 input, validation, AI turn, chance reset, +1000 computer-defeat continuation, cross-round replay rejection, loss, restart, records, close confirmation and abort.
+Profiles: tester active; tester and player stored; tester 1 completed game at profile capture.
+Ranking: tester 1430, tester 0. Aborted entry excluded.

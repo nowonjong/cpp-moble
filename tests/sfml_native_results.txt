@@ -1,0 +1,9 @@
+﻿PASS Native EDIT hidden on Home
+PASS Start button through parent mouse events shows and enables native EDIT
+PASS Korean UTF-16 EDIT text accepted
+PASS Resize keeps EDIT aligned: (78, 581, 495, 59)
+PASS Record format header written
+PASS Single Enter sequence yields exactly one WIN 10 record
+PASS Native EDIT hidden after game finishes
+PASS Finished game window exits cleanly
+LIMITATION: messages are synthetic; actual Microsoft Korean IME keyboard composition was not physically tested.
