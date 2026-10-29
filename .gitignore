@@ -1,0 +1,7 @@
+.vs/
+bin/
+obj/
+tests/obj/
+*.vcxproj.user
+data/records.txt*
+
